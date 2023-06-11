@@ -1,10 +1,10 @@
 const messageContainer = document.getElementById("message-container");
-const feed = ["meddelande"];
+//const feed = ["meddelande"];
 
 function createMessage() {
   const message = document.createElement("div");
   message.classList.add("message");
-  message.textContent = feed;
+  message.textContent = "Meddelande";
 
   const timer = document.createElement("div");
   timer.classList.add("timer");
@@ -17,6 +17,7 @@ function createMessage() {
 
 function addMessage() {
   const message = createMessage();
+  
   messageContainer.prepend(message);
 
   setTimeout(() => {
@@ -41,12 +42,14 @@ function handleClick(event) {
   if (clickedMessage) {
     removeMessage(clickedMessage);
   } else {
+   // feed.push("Meddelande");
     addMessage();
   }
 }
+
 //to remove the message when clicked
 window.addEventListener("click", handleClick);
 
-//to add a message when clicked
-/*window.addEventListener("click", () => feed.push("hello"));
+//to add a message to the feed array when clicked
+/*window.addEventListener("click", () => feed.push("Meddelande"));
  */
